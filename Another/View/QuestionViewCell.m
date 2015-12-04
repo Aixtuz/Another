@@ -46,23 +46,8 @@
     self.editorLabel.text = questionEntity.sEditor;
     
     // 调整行高
-    [self resetContent];
-}
-
-// 调整行高
-- (void)resetContent{
-    
-    NSMutableAttributedString *QuestionString = [[NSMutableAttributedString alloc] initWithString:self.questionContent.text];
-    NSMutableAttributedString *answerString = [[NSMutableAttributedString alloc] initWithString:self.answerContent.text];
-    
-    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-    paragraphStyle.lineSpacing = 10 ;  // 自定义行高度
-    
-    [QuestionString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange (0, [self.questionContent.text length])];
-    self.questionContent.attributedText = QuestionString;
-    
-    [answerString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange (0, [self.questionContent.text length])];
-    self.answerContent.attributedText = answerString;
+    [self resetLabel:self.questionContent withHeight:10];
+    [self resetLabel:self.answerContent withHeight:10];
 }
 
 // 初始化方法

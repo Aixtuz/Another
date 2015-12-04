@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "HPEntity.h"
+#import "BasicViewCell.h"
 
-@interface HPViewCell : UICollectionViewCell
+@interface HPViewCell : BasicViewCell
 
 // 接收数据
-- (void)setWithModel:(HPEntity *)hpEntity;
+- (void)setWithModel:(HPEntity *)hpEntity andDateStr:(NSString *)dateStr;
 
 @end

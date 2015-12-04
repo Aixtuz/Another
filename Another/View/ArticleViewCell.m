@@ -49,18 +49,7 @@
     self.authorInfo.text = articleEntity.sAuth;
     
     // 调整行高
-    [self resetContent];
-}
-
-// 调整行高
-- ( void )resetContent{
-    
-    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.contentLabel.text];
-    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-    paragraphStyle.lineSpacing = 10 ;  // 自定义行高度
-
-    [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange (0, [self.contentLabel.text length])];
-    self.contentLabel.attributedText = attributedString;
+    [self resetLabel:self.contentLabel withHeight:10];
 }
 
 // 初始化方法

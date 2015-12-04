@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "ArticleEntity.h"
+#import "BasicViewCell.h"
 
-@interface ArticleViewCell : UICollectionViewCell
+@interface ArticleViewCell : BasicViewCell
 
 // 接收数据
 - (void)setWithModel:(ArticleEntity *)articleEntity;

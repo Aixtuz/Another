@@ -13,8 +13,6 @@
 
 @interface ArticleViewController ()
 
-///  指定日期
-@property (nonatomic, strong) NSDate *day;
 ///  模型缓存
 @property (nonatomic, strong) NSMutableDictionary *articleDict;
 ///  布局属性
@@ -30,37 +28,14 @@ static NSString * const reuseIdentifier = @"ArticleViewCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.day = [NSDate date];
-    
     // Register cell classes
     [self.collectionView registerClass:[ArticleViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-
 }
 
-
+// 设置 flowlayout
 - (void)viewDidLayoutSubviews {
-    
-    // 顶部距离
-    CGRect rectStatus = [[UIApplication sharedApplication] statusBarFrame];
-    CGRect rectNav = self.navigationController.navigationBar.frame;
-    NSInteger topHeight = rectStatus.size.height + rectNav.size.height;
-    
-    // 底部距离
-    CGRect rectTab = self.tabBarController.tabBar.frame;
-    NSInteger bottomHeight = rectTab.size.height;
-    
-    // 尺寸:
-    CGRect rect = self.collectionView.bounds;
-    rect.origin = CGPointMake(rect.origin.x, rect.origin.y - topHeight);
-    rect.size = CGSizeMake(rect.size.width, rect.size.height - topHeight - bottomHeight);
-    self.flowLayout.itemSize = rect.size;
-    
-    // 横间距
-    self.flowLayout.minimumInteritemSpacing = 0;
-    // 纵间距
-    self.flowLayout.minimumLineSpacing = 0;
+    [self layoutWithFlow:self.flowLayout];
 }
-
 
 // 模型集合增加元素方法
 - (void)addByDateStr:(NSString *)dateStr andInfo:(NSString *)info {
@@ -71,16 +46,20 @@ static NSString * const reuseIdentifier = @"ArticleViewCell";
         NSString *urlStr = [NSString stringWithFormat:@"http://rest.wufazhuce.com/OneForWeb/one/%@?strDate=%@", info, dateStr];
         NSURL *url = [NSURL URLWithString:urlStr];
         
-        // 封装的 GET 请求
-        [KCLNetworkTools getWithUrl:url andKey:@"contentEntity" completion:^(NSDictionary *dict) {
-            ArticleEntity *articleEntity = [ArticleEntity articleEntityWithDict:dict];
-            [self.articleDict setObject:articleEntity forKey:dateStr];
+        // 异步发送请求
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
             
-            // 主线程更新
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self.collectionView reloadData];
-            });
-        }];
+            // 封装的 GET 请求
+            [KCLNetworkTools getWithUrl:url andKey:@"contentEntity" completion:^(NSDictionary *dict) {
+                ArticleEntity *articleEntity = [ArticleEntity articleEntityWithDict:dict];
+                [self.articleDict setObject:articleEntity forKey:dateStr];
+                
+                // 主线程更新
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.collectionView reloadData];
+                });
+            }];
+        });
     }
 }
 
@@ -94,20 +73,6 @@ static NSString * const reuseIdentifier = @"ArticleViewCell";
     [self addByDateStr:dateStr andInfo:@"getOneContentInfo"];
 }
 
-// date --> str
-- (NSString *)strWithDate:(NSDate *)date {
-    
-    // 日期格式化
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.dateFormat = @"yyyy-MM-dd";
-    return [formatter stringFromDate:date];
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 #pragma mark <UICollectionViewDataSource>
 

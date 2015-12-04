@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "QuestionEntity.h"
+#import "BasicViewCell.h"
 
-@interface QuestionViewCell : UICollectionViewCell
+@interface QuestionViewCell : BasicViewCell
 
 // 接收数据
 - (void)setWithModel:(QuestionEntity *)questionEntity;

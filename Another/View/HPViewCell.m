@@ -1,4 +1,4 @@
-//
+
 //  HPViewCell.m
 //  Another
 //
@@ -7,6 +7,8 @@
 //
 
 #import "HPViewCell.h"
+#import "NSString+KCL.h"
+#import "KCLNetworkTools.h"
 
 @interface HPViewCell ()
 
@@ -28,23 +30,16 @@
 @implementation HPViewCell
 
 // 接收数据
-- (void)setWithModel:(HPEntity *)hpEntity {
+- (void)setWithModel:(HPEntity *)hpEntity andDateStr:(NSString *)dateStr {
 
     // VOL
     self.volLabel.text = hpEntity.strHpTitle;
     
     // 图片
-    // NSURLConnection 异步请求(自带缓存)
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:hpEntity.strOriginalImgUrl]];
-    // 异步请求
-    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-        self.imageView.image = [UIImage imageWithData:data];
-    }];
+    [KCLNetworkTools setImageView:self.imageView withUrlStr:hpEntity.strOriginalImgUrl andDateStr:dateStr];
     
     // 作者
-    NSMutableString *str = [NSMutableString stringWithString:hpEntity.strAuthor];
-    //!!!: 替换换行符
-    self.authorLabel.text = [str stringByReplacingOccurrencesOfString:@"&" withString:@"\r\n"];;
+    self.authorLabel.text = [hpEntity.strAuthor strFormat];
     
     // 日
     NSRange dayRange = NSMakeRange(8, 2);
@@ -58,18 +53,8 @@
     self.textLabel.text = hpEntity.strContent;
     
     // 调整行高
-    [self resetContent];
-}
-
-//!!!: 调整行高
-- ( void )resetContent{
-    
-    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.textLabel.text];
-    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-    paragraphStyle.lineSpacing = 5 ;  // 自定义行高度
-    
-    [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange (0, [self.textLabel.text length])];
-    self.textLabel.attributedText = attributedString;
+    [self resetLabel:self.authorLabel withHeight:5];
+    [self resetLabel:self.textLabel withHeight:5];
 }
 
 // 初始化方法

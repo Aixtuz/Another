@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A70F9D871C10420900B75609 /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A70F9D861C10420900B75609 /* BasicViewController.m */; };
 		A71A96941C0EB99900AFFE27 /* QuestionEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = A71A96931C0EB99900AFFE27 /* QuestionEntity.m */; };
 		A71A96981C0EBDEA00AFFE27 /* QuestionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A71A96961C0EBDEA00AFFE27 /* QuestionViewCell.m */; };
 		A71A96991C0EBDEA00AFFE27 /* QuestionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A71A96971C0EBDEA00AFFE27 /* QuestionViewCell.xib */; };
+		A72960591C0FE333004EF3A3 /* BasicViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A72960581C0FE333004EF3A3 /* BasicViewCell.m */; };
+		A729605D1C0FE44B004EF3A3 /* NSString+KCL.m in Sources */ = {isa = PBXBuildFile; fileRef = A729605C1C0FE44B004EF3A3 /* NSString+KCL.m */; };
 		A77300B91C0946BC00237274 /* HPViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A77300B81C0946BC00237274 /* HPViewCell.m */; };
 		A7766E871C0D7BFB00391E48 /* ArticleEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = A7766E861C0D7BFB00391E48 /* ArticleEntity.m */; };
 		A77B42161C0E073D0039710D /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A77B42151C0E073D0039710D /* QuestionViewController.m */; };
@@ -18,21 +21,27 @@
 		A7BBDCB91C0D5C9700475861 /* ArticleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BBDCB71C0D5C9700475861 /* ArticleViewCell.m */; };
 		A7BBDCBA1C0D5C9700475861 /* ArticleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7BBDCB81C0D5C9700475861 /* ArticleViewCell.xib */; };
 		A7BBDCBD1C0D692900475861 /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BBDCBC1C0D692900475861 /* ArticleViewController.m */; };
+		A7BFC0F21C11687600CD3007 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7BFC0F11C11687600CD3007 /* Launch Screen.storyboard */; };
 		A7EB44931C0151DD00DE3250 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EB44921C0151DD00DE3250 /* main.m */; };
 		A7EB449C1C0151DD00DE3250 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7EB449A1C0151DD00DE3250 /* Main.storyboard */; };
 		A7EB449E1C0151DD00DE3250 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7EB449D1C0151DD00DE3250 /* Assets.xcassets */; };
 		A7EB44B21C01525800DE3250 /* HPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EB44AA1C01525800DE3250 /* HPViewController.m */; };
 		A7EB44B31C01525800DE3250 /* HPEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EB44AD1C01525800DE3250 /* HPEntity.m */; };
 		A7EB44B41C01525800DE3250 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EB44B01C01525800DE3250 /* AppDelegate.m */; };
-		A7F3111F1C050DB700B8399E /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7F3111E1C050DB700B8399E /* Launch Screen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A70F9D851C10420900B75609 /* BasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicViewController.h; sourceTree = "<group>"; };
+		A70F9D861C10420900B75609 /* BasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicViewController.m; sourceTree = "<group>"; };
 		A71A96921C0EB99900AFFE27 /* QuestionEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionEntity.h; sourceTree = "<group>"; };
 		A71A96931C0EB99900AFFE27 /* QuestionEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionEntity.m; sourceTree = "<group>"; };
 		A71A96951C0EBDEA00AFFE27 /* QuestionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewCell.h; sourceTree = "<group>"; };
 		A71A96961C0EBDEA00AFFE27 /* QuestionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewCell.m; sourceTree = "<group>"; };
 		A71A96971C0EBDEA00AFFE27 /* QuestionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionViewCell.xib; sourceTree = "<group>"; };
+		A72960571C0FE333004EF3A3 /* BasicViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicViewCell.h; sourceTree = "<group>"; };
+		A72960581C0FE333004EF3A3 /* BasicViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicViewCell.m; sourceTree = "<group>"; };
+		A729605B1C0FE44B004EF3A3 /* NSString+KCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+KCL.h"; sourceTree = "<group>"; };
+		A729605C1C0FE44B004EF3A3 /* NSString+KCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+KCL.m"; sourceTree = "<group>"; };
 		A77300B71C0946BC00237274 /* HPViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPViewCell.h; sourceTree = "<group>"; };
 		A77300B81C0946BC00237274 /* HPViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPViewCell.m; sourceTree = "<group>"; };
 		A7766E851C0D7BFB00391E48 /* ArticleEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleEntity.h; sourceTree = "<group>"; };
@@ -47,6 +56,7 @@
 		A7BBDCB81C0D5C9700475861 /* ArticleViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleViewCell.xib; sourceTree = "<group>"; };
 		A7BBDCBB1C0D692900475861 /* ArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleViewController.h; sourceTree = "<group>"; };
 		A7BBDCBC1C0D692900475861 /* ArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleViewController.m; sourceTree = "<group>"; };
+		A7BFC0F11C11687600CD3007 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		A7EB448E1C0151DD00DE3250 /* Another.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Another.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7EB44921C0151DD00DE3250 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A7EB449B1C0151DD00DE3250 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,7 +68,6 @@
 		A7EB44AD1C01525800DE3250 /* HPEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPEntity.m; sourceTree = "<group>"; };
 		A7EB44AF1C01525800DE3250 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A7EB44B01C01525800DE3250 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A7F3111E1C050DB700B8399E /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +105,7 @@
 				A7EB44A81C01525800DE3250 /* Controller */,
 				A7EB44AE1C01525800DE3250 /* Other */,
 				A7EB449A1C0151DD00DE3250 /* Main.storyboard */,
-				A7F3111E1C050DB700B8399E /* Launch Screen.xib */,
+				A7BFC0F11C11687600CD3007 /* Launch Screen.storyboard */,
 				A7EB449D1C0151DD00DE3250 /* Assets.xcassets */,
 				A7EB44911C0151DD00DE3250 /* Supporting Files */,
 			);
@@ -115,6 +124,8 @@
 		A7EB44A81C01525800DE3250 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A70F9D851C10420900B75609 /* BasicViewController.h */,
+				A70F9D861C10420900B75609 /* BasicViewController.m */,
 				A7EB44A91C01525800DE3250 /* HPViewController.h */,
 				A7EB44AA1C01525800DE3250 /* HPViewController.m */,
 				A7BBDCBB1C0D692900475861 /* ArticleViewController.h */,
@@ -145,6 +156,8 @@
 				A7EB44B01C01525800DE3250 /* AppDelegate.m */,
 				A78663B31C06ACA100F8727D /* KCLNetworkTools.h */,
 				A78663B41C06ACA100F8727D /* KCLNetworkTools.m */,
+				A729605B1C0FE44B004EF3A3 /* NSString+KCL.h */,
+				A729605C1C0FE44B004EF3A3 /* NSString+KCL.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -152,6 +165,8 @@
 		A7EB44B11C01525800DE3250 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A72960571C0FE333004EF3A3 /* BasicViewCell.h */,
+				A72960581C0FE333004EF3A3 /* BasicViewCell.m */,
 				A77300B71C0946BC00237274 /* HPViewCell.h */,
 				A77300B81C0946BC00237274 /* HPViewCell.m */,
 				A786DDE31C09374B00096FE5 /* HPViewCell.xib */,
@@ -228,7 +243,7 @@
 				A786DDE51C09374B00096FE5 /* HPViewCell.xib in Resources */,
 				A7BBDCBA1C0D5C9700475861 /* ArticleViewCell.xib in Resources */,
 				A71A96991C0EBDEA00AFFE27 /* QuestionViewCell.xib in Resources */,
-				A7F3111F1C050DB700B8399E /* Launch Screen.xib in Resources */,
+				A7BFC0F21C11687600CD3007 /* Launch Screen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,10 +262,13 @@
 				A7EB44B31C01525800DE3250 /* HPEntity.m in Sources */,
 				A71A96941C0EB99900AFFE27 /* QuestionEntity.m in Sources */,
 				A7BBDCBD1C0D692900475861 /* ArticleViewController.m in Sources */,
+				A70F9D871C10420900B75609 /* BasicViewController.m in Sources */,
 				A77B42161C0E073D0039710D /* QuestionViewController.m in Sources */,
 				A7EB44931C0151DD00DE3250 /* main.m in Sources */,
 				A7EB44B21C01525800DE3250 /* HPViewController.m in Sources */,
+				A72960591C0FE333004EF3A3 /* BasicViewCell.m in Sources */,
 				A7766E871C0D7BFB00391E48 /* ArticleEntity.m in Sources */,
+				A729605D1C0FE44B004EF3A3 /* NSString+KCL.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

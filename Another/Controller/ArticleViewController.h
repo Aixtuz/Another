@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BasicViewController.h"
 
 ///  文章视图控制器
-@interface ArticleViewController : UICollectionViewController
+@interface ArticleViewController : BasicViewController
 
 @end

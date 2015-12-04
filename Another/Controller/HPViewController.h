@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BasicViewController.h"
 
 ///  短语视图控制器
-@interface HPViewController : UICollectionViewController
+@interface HPViewController : BasicViewController
 
 @end

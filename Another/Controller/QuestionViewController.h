@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BasicViewController.h"
 
-@interface QuestionViewController : UICollectionViewController
+@interface QuestionViewController : BasicViewController
 
 @end
